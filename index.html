@@ -1,1 +1,197 @@
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Reddy Anna - 24x7 Services</title>
+<style>
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{
+    min-height:100vh;
+    background:#080808;
+    color:#fff;
+    font-family:Arial,Helvetica,sans-serif;
+    display:flex;
+    justify-content:center;
+    padding:18px;
+  }
+  .poster{
+    width:min(100%,900px);
+    background:
+      radial-gradient(circle at 50% 18%,rgba(255,210,30,.10),transparent 28%),
+      linear-gradient(145deg,#111,#050505 55%,#15100a);
+    border:2px solid #d9a900;
+    border-radius:18px;
+    box-shadow:0 0 35px rgba(255,193,7,.18);
+    overflow:hidden;
+    padding:28px 28px 22px;
+  }
+  .welcome{
+    text-align:center;
+    color:#ffe45b;
+    font-size:clamp(26px,5vw,52px);
+    font-weight:900;
+    letter-spacing:2px;
+    text-shadow:0 0 14px rgba(255,214,45,.4);
+  }
+  .brand{
+    text-align:center;
+    color:#ffd21c;
+    font-size:clamp(70px,15vw,150px);
+    line-height:.85;
+    font-weight:1000;
+    letter-spacing:-5px;
+    text-shadow:2px 3px 0 #8f6500,0 0 18px rgba(255,202,0,.35);
+    position:relative;
+  }
+  .anna{
+    position:absolute;
+    left:50%;
+    top:50%;
+    transform:translate(-50%,-30%);
+    background:#090909;
+    color:#ffe34d;
+    font-size:clamp(20px,4vw,42px);
+    letter-spacing:1px;
+    padding:6px 18px;
+  }
+  .since{
+    display:flex;
+    align-items:center;
+    gap:16px;
+    justify-content:center;
+    color:#ddd;
+    font-size:clamp(18px,3vw,32px);
+    letter-spacing:4px;
+    margin:18px 0 25px;
+  }
+  .since:before,.since:after{content:"";height:3px;flex:1;background:#d9aa13}
+  .offers{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+  .offer{
+    background:linear-gradient(135deg,#ffd51e,#c58b00);
+    color:#050505;
+    border:2px solid #ffe66b;
+    border-radius:18px;
+    padding:18px;
+    text-align:center;
+    box-shadow:0 0 18px rgba(255,200,0,.22);
+  }
+  .percent{font-size:clamp(58px,10vw,100px);font-weight:1000;line-height:.9}
+  .bonus{font-size:clamp(24px,4vw,42px);font-weight:1000}
+  .sub{font-size:clamp(18px,3vw,30px);font-weight:900;margin-top:7px}
+  .sites{
+    margin-top:20px;
+    border:2px solid #e0b500;
+    border-radius:15px;
+    padding:18px;
+    background:#0b0b0b;
+    text-align:center;
+  }
+  .sites-title{color:#ffe044;font-size:clamp(20px,3vw,30px);font-weight:900;margin-bottom:15px}
+  .site-list{
+    display:flex;flex-wrap:wrap;gap:10px;justify-content:center
+  }
+  .site{
+    padding:10px 16px;
+    border:1px solid #d9aa13;
+    border-radius:10px;
+    background:#151515;
+    color:#fff;
+    font-weight:800;
+    font-size:clamp(14px,2vw,19px)
+  }
+  .message,.withdrawal{
+    margin-top:16px;
+    border-radius:15px;
+    padding:17px 20px;
+    text-align:center;
+    border:2px solid #d9aa13;
+    background:#0b0b0b;
+    font-size:clamp(16px,2.5vw,24px);
+    line-height:1.35;
+    font-weight:700;
+  }
+  .message strong,.withdrawal strong{color:#ffe044}
+  .withdrawal{
+    font-size:clamp(20px,3.5vw,34px);
+  }
+  .contact{
+    margin-top:18px;
+    border-radius:16px;
+    background:linear-gradient(135deg,#ffd51e,#d79c00);
+    color:#050505;
+    padding:18px;
+    text-align:center;
+  }
+  .wa-label{font-size:clamp(20px,3vw,30px);font-weight:900}
+  .phone{font-size:clamp(28px,5vw,52px);font-weight:1000;letter-spacing:1px;margin-top:4px}
+  .footer{
+    text-align:center;
+    color:#ffe044;
+    font-weight:900;
+    margin-top:18px;
+    font-size:clamp(16px,2.5vw,24px);
+    letter-spacing:2px;
+  }
+  @media(max-width:650px){
+    .poster{padding:20px 14px 18px}
+    .offers{gap:10px}
+    .offer{padding:13px 7px}
+    .since{gap:8px;letter-spacing:2px}
+    .brand{letter-spacing:-3px}
+  }
+</style>
+</head>
+<body>
+  <main class="poster">
+    <div class="welcome">WELCOME TO</div>
+    <div class="brand">REDDY<span class="anna">ANNA</span></div>
+
+    <div class="since">
+      <span>SINCE 2010</span>
+    </div>
+
+    <section class="offers">
+      <div class="offer">
+        <div class="percent">10%</div>
+        <div class="bonus">BONUS</div>
+        <div class="sub">ON NEW ID</div>
+      </div>
+      <div class="offer">
+        <div class="percent">4%</div>
+        <div class="bonus">ON EVERY</div>
+        <div class="sub">REFILL</div>
+      </div>
+    </section>
+
+    <section class="sites">
+      <div class="sites-title">AVAILABLE SITES</div>
+      <div class="site-list">
+        <div class="site">Diamond Exchange</div>
+        <div class="site">Sky Exchange</div>
+        <div class="site">Lesar247</div>
+        <div class="site">World777</div>
+        <div class="site">Reddy444</div>
+      </div>
+    </section>
+
+    <div class="message">
+      If you want, you can tell us your favorite sites,<br>
+      <strong>we have all sites available.</strong>
+    </div>
+
+    <div class="withdrawal">
+      <strong>FASTEST WITHDRAWAL</strong><br>
+      Under 15 min in your bank account
+    </div>
+
+    <div class="contact">
+      <div class="wa-label">🟢 WhatsApp for new ID</div>
+      <div class="phone">+1 236 771-8781</div>
+    </div>
+
+    <div class="footer">🙏 ENJOY 24x7 SERVICES 🙏</div>
+  </main>
+</body>
+</html>
