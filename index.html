@@ -1,310 +1,784 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
+  <meta charset="UTF-8">
 
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Reddy Anna | FairPlay Info</title>
+  <title>Reddy Anna | FairPlay Info</title>
 
-<meta name="description" content="FairPlay Info - Visit our website for information and 24x7 customer support. Contact us through WhatsApp for assistance.">
+  <meta
+    name="description"
+    content="FairPlay Info - 24x7 customer support and website information. Contact us through WhatsApp for assistance."
+  >
 
-<meta name="robots" content="index, follow">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://fairplayinfo.com/">
 
-<link rel="canonical" href="https://fairplayinfo.com/">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://fairplayinfo.com/">
+  <meta property="og:title" content="Reddy Anna | FairPlay Info">
+  <meta
+    property="og:description"
+    content="FairPlay Info - 24x7 customer support and website information."
+  >
 
-<!-- Open Graph / Social Sharing -->
-<meta property="og:type" content="website">
-<meta property="og:url" content="https://fairplayinfo.com/">
-<meta property="og:title" content="Reddy Anna | FairPlay Info">
-<meta property="og:description" content="Visit FairPlay Info for website information and customer support.">
-<meta property="og:site_name" content="FairPlay Info">
+  <meta name="theme-color" content="#090909">
 
-<!-- Mobile Browser -->
-<meta name="theme-color" content="#080808">
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
 
-<style>
-  *{box-sizing:border-box;margin:0;padding:0}
+    :root {
+      --gold: #ffd21f;
+      --gold-light: #ffe978;
+      --gold-dark: #b77b00;
+      --black: #070707;
+      --card: #111111;
+      --text: #ffffff;
+      --muted: #bcbcbc;
+      --green: #25d366;
+    }
 
-  body{
-    min-height:100vh;
-    background:#080808;
-    color:#fff;
-    font-family:Arial,Helvetica,sans-serif;
-    display:flex;
-    justify-content:center;
-    padding:18px;
-  }
+    html {
+      scroll-behavior: smooth;
+    }
 
-  .poster{
-    width:min(100%,900px);
-    background:
-      radial-gradient(circle at 50% 18%,rgba(255,210,30,.10),transparent 28%),
-      linear-gradient(145deg,#111,#050505 55%,#15100a);
-    border:2px solid #d9a900;
-    border-radius:18px;
-    box-shadow:0 0 35px rgba(255,193,7,.18);
-    overflow:hidden;
-    padding:28px 28px 22px;
-  }
+    body {
+      min-height: 100vh;
+      background:
+        radial-gradient(
+          circle at 50% 0%,
+          rgba(255, 210, 31, 0.12),
+          transparent 35%
+        ),
+        #050505;
+      color: var(--text);
+      font-family:
+        Inter,
+        Arial,
+        Helvetica,
+        sans-serif;
+      line-height: 1.5;
+      overflow-x: hidden;
+    }
 
-  .welcome{
-    text-align:center;
-    color:#ffe45b;
-    font-size:clamp(26px,5vw,52px);
-    font-weight:900;
-    letter-spacing:2px;
-    text-shadow:0 0 14px rgba(255,214,45,.4);
-  }
+    /* =========================
+       BACKGROUND EFFECT
+    ========================= */
 
-  .brand{
-    text-align:center;
-    color:#ffd21c;
-    font-size:clamp(70px,15vw,150px);
-    line-height:.85;
-    font-weight:1000;
-    letter-spacing:-5px;
-    text-shadow:2px 3px 0 #8f6500,0 0 18px rgba(255,202,0,.35);
-    position:relative;
-  }
+    body::before {
+      content: "";
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      background:
+        linear-gradient(
+          115deg,
+          transparent 20%,
+          rgba(255, 210, 31, 0.025) 50%,
+          transparent 80%
+        );
+      z-index: -1;
+    }
 
-  .anna{
-    position:absolute;
-    left:50%;
-    top:50%;
-    transform:translate(-50%,-30%);
-    background:#090909;
-    color:#ffe34d;
-    font-size:clamp(20px,4vw,42px);
-    letter-spacing:1px;
-    padding:6px 18px;
-  }
+    /* =========================
+       MAIN CONTAINER
+    ========================= */
 
-  .since{
-    display:flex;
-    align-items:center;
-    gap:16px;
-    justify-content:center;
-    color:#ddd;
-    font-size:clamp(18px,3vw,32px);
-    letter-spacing:4px;
-    margin:18px 0 25px;
-  }
+    .container {
+      width: min(1120px, calc(100% - 30px));
+      margin: auto;
+    }
 
-  .since:before,.since:after{
-    content:"";
-    height:3px;
-    flex:1;
-    background:#d9aa13
-  }
+    /* =========================
+       HEADER
+    ========================= */
 
-  .offers{
-    display:grid;
-    grid-template-columns:1fr 1fr;
-    gap:18px
-  }
+    header {
+      padding: 25px 0;
+      border-bottom: 1px solid rgba(255, 210, 31, 0.15);
+    }
 
-  .offer{
-    background:linear-gradient(135deg,#ffd51e,#c58b00);
-    color:#050505;
-    border:2px solid #ffe66b;
-    border-radius:18px;
-    padding:18px;
-    text-align:center;
-    box-shadow:0 0 18px rgba(255,200,0,.22);
-  }
+    .nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+    }
 
-  .percent{
-    font-size:clamp(58px,10vw,100px);
-    font-weight:1000;
-    line-height:.9
-  }
+    .logo {
+      color: var(--gold);
+      font-size: 25px;
+      font-weight: 900;
+      letter-spacing: 1px;
+    }
 
-  .bonus{
-    font-size:clamp(24px,4vw,42px);
-    font-weight:1000
-  }
+    .logo span {
+      color: #fff;
+    }
 
-  .sub{
-    font-size:clamp(18px,3vw,30px);
-    font-weight:900;
-    margin-top:7px
-  }
+    .nav-button {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 11px 18px;
+      border-radius: 999px;
+      background: var(--green);
+      color: #061b0d;
+      text-decoration: none;
+      font-weight: 900;
+      transition: 0.25s ease;
+    }
 
-  .sites{
-    margin-top:20px;
-    border:2px solid #e0b500;
-    border-radius:15px;
-    padding:18px;
-    background:#0b0b0b;
-    text-align:center;
-  }
+    .nav-button:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 25px rgba(37, 211, 102, 0.25);
+    }
 
-  .sites-title{
-    color:#ffe044;
-    font-size:clamp(20px,3vw,30px);
-    font-weight:900;
-    margin-bottom:15px
-  }
+    /* =========================
+       HERO
+    ========================= */
 
-  .site-list{
-    display:flex;
-    flex-wrap:wrap;
-    gap:10px;
-    justify-content:center
-  }
+    .hero {
+      text-align: center;
+      padding: 70px 0 45px;
+    }
 
-  .site{
-    padding:10px 16px;
-    border:1px solid #d9aa13;
-    border-radius:10px;
-    background:#151515;
-    color:#fff;
-    font-weight:800;
-    font-size:clamp(14px,2vw,19px)
-  }
+    .eyebrow {
+      display: inline-block;
+      padding: 8px 16px;
+      border: 1px solid rgba(255, 210, 31, 0.4);
+      border-radius: 999px;
+      color: var(--gold-light);
+      background: rgba(255, 210, 31, 0.06);
+      font-size: 14px;
+      font-weight: 800;
+      letter-spacing: 1px;
+      margin-bottom: 22px;
+    }
 
-  .message,.withdrawal{
-    margin-top:16px;
-    border-radius:15px;
-    padding:17px 20px;
-    text-align:center;
-    border:2px solid #d9aa13;
-    background:#0b0b0b;
-    font-size:clamp(16px,2.5vw,24px);
-    line-height:1.35;
-    font-weight:700;
-  }
+    .hero h1 {
+      font-size: clamp(48px, 11vw, 105px);
+      line-height: 0.9;
+      font-weight: 1000;
+      letter-spacing: -4px;
+      color: var(--gold);
+      text-shadow:
+        0 4px 0 #855e00,
+        0 0 35px rgba(255, 210, 31, 0.2);
+    }
 
-  .message strong,.withdrawal strong{
-    color:#ffe044
-  }
+    .hero h1 span {
+      display: block;
+      color: #fff;
+      font-size: 0.38em;
+      letter-spacing: 5px;
+      margin-top: 16px;
+      text-shadow: none;
+    }
 
-  .withdrawal{
-    font-size:clamp(20px,3.5vw,34px);
-  }
+    .hero p {
+      max-width: 650px;
+      margin: 28px auto 0;
+      color: var(--muted);
+      font-size: clamp(16px, 2.5vw, 20px);
+    }
 
-  .contact{
-    margin-top:18px;
-    border-radius:16px;
-    background:linear-gradient(135deg,#ffd51e,#d79c00);
-    color:#050505;
-    padding:18px;
-    text-align:center;
-  }
+    /* =========================
+       CTA
+    ========================= */
 
-  .wa-label{
-    font-size:clamp(20px,3vw,30px);
-    font-weight:900
-  }
+    .hero-actions {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 30px;
+    }
 
-  .phone{
-    font-size:clamp(28px,5vw,52px);
-    font-weight:1000;
-    letter-spacing:1px;
-    margin-top:4px;
-  }
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 52px;
+      padding: 0 24px;
+      border-radius: 12px;
+      text-decoration: none;
+      font-weight: 900;
+      transition: 0.25s ease;
+    }
 
-  /* Clickable WhatsApp number */
-  .phone a{
-    color:inherit;
-    text-decoration:none;
-  }
+    .btn-primary {
+      background: linear-gradient(
+        135deg,
+        #ffe66b,
+        #d99b00
+      );
+      color: #090909;
+      box-shadow:
+        0 10px 35px rgba(255, 210, 31, 0.15);
+    }
 
-  .phone a:hover{
-    text-decoration:underline;
-  }
+    .btn-secondary {
+      border: 1px solid #444;
+      color: #fff;
+      background: #111;
+    }
 
-  .footer{
-    text-align:center;
-    color:#ffe044;
-    font-weight:900;
-    margin-top:18px;
-    font-size:clamp(16px,2.5vw,24px);
-    letter-spacing:2px;
-  }
+    .btn:hover {
+      transform: translateY(-3px);
+    }
 
-  @media(max-width:650px){
-    .poster{padding:20px 14px 18px}
-    .offers{gap:10px}
-    .offer{padding:13px 7px}
-    .since{gap:8px;letter-spacing:2px}
-    .brand{letter-spacing:-3px}
-  }
-</style>
+    /* =========================
+       OFFER CARDS
+    ========================= */
+
+    .section-title {
+      text-align: center;
+      margin: 30px 0 22px;
+    }
+
+    .section-title h2 {
+      font-size: clamp(27px, 5vw, 40px);
+      color: #fff;
+    }
+
+    .section-title p {
+      margin-top: 7px;
+      color: var(--muted);
+    }
+
+    .offers {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 18px;
+    }
+
+    .offer {
+      position: relative;
+      overflow: hidden;
+      padding: 28px;
+      border-radius: 22px;
+      background:
+        linear-gradient(
+          145deg,
+          #191919,
+          #0d0d0d
+        );
+      border: 1px solid rgba(255, 210, 31, 0.35);
+      box-shadow:
+        0 15px 45px rgba(0, 0, 0, 0.35);
+      transition: 0.3s ease;
+    }
+
+    .offer::after {
+      content: "";
+      position: absolute;
+      width: 140px;
+      height: 140px;
+      right: -60px;
+      top: -60px;
+      border-radius: 50%;
+      background: rgba(255, 210, 31, 0.08);
+    }
+
+    .offer:hover {
+      transform: translateY(-5px);
+      border-color: rgba(255, 210, 31, 0.75);
+    }
+
+    .offer-number {
+      color: var(--gold);
+      font-size: clamp(55px, 9vw, 90px);
+      font-weight: 1000;
+      line-height: 1;
+    }
+
+    .offer-title {
+      margin-top: 10px;
+      font-size: 25px;
+      font-weight: 900;
+    }
+
+    .offer-text {
+      color: var(--muted);
+      margin-top: 5px;
+    }
+
+    /* =========================
+       SITES
+    ========================= */
+
+    .sites {
+      margin-top: 20px;
+      padding: 28px;
+      border-radius: 22px;
+      background: #0d0d0d;
+      border: 1px solid rgba(255, 210, 31, 0.25);
+    }
+
+    .site-grid {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 12px;
+      margin-top: 20px;
+    }
+
+    .site {
+      min-height: 65px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 12px;
+      border-radius: 13px;
+      background: #171717;
+      border: 1px solid #292929;
+      color: #fff;
+      font-weight: 800;
+      transition: 0.25s ease;
+    }
+
+    .site:hover {
+      color: var(--gold);
+      border-color: var(--gold-dark);
+      transform: translateY(-3px);
+    }
+
+    /* =========================
+       INFO
+    ========================= */
+
+    .info-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 18px;
+      margin-top: 20px;
+    }
+
+    .info-card {
+      padding: 28px;
+      border-radius: 22px;
+      background: #0d0d0d;
+      border: 1px solid #252525;
+    }
+
+    .info-icon {
+      font-size: 32px;
+    }
+
+    .info-card h3 {
+      margin-top: 10px;
+      color: var(--gold);
+      font-size: 22px;
+    }
+
+    .info-card p {
+      margin-top: 8px;
+      color: var(--muted);
+    }
+
+    /* =========================
+       WHATSAPP
+    ========================= */
+
+    .contact {
+      margin: 45px 0 30px;
+      padding: 38px 25px;
+      text-align: center;
+      border-radius: 25px;
+      background:
+        linear-gradient(
+          135deg,
+          #ffd72d,
+          #c78900
+        );
+      color: #080808;
+      box-shadow:
+        0 20px 60px rgba(255, 190, 0, 0.12);
+    }
+
+    .contact h2 {
+      font-size: clamp(25px, 5vw, 40px);
+      font-weight: 1000;
+    }
+
+    .contact p {
+      margin-top: 6px;
+      font-weight: 700;
+      opacity: 0.8;
+    }
+
+    .whatsapp-number {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      margin-top: 20px;
+      padding: 14px 24px;
+      border-radius: 999px;
+      background: #111;
+      color: #fff;
+      text-decoration: none;
+      font-size: clamp(20px, 4vw, 30px);
+      font-weight: 1000;
+      transition: 0.25s ease;
+    }
+
+    .whatsapp-number:hover {
+      transform: scale(1.03);
+      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.25);
+    }
+
+    /* =========================
+       FOOTER
+    ========================= */
+
+    footer {
+      padding: 25px 0 35px;
+      text-align: center;
+      color: #777;
+      font-size: 14px;
+    }
+
+    /* =========================
+       FLOATING WHATSAPP
+    ========================= */
+
+    .floating-whatsapp {
+      position: fixed;
+      right: 20px;
+      bottom: 20px;
+      width: 58px;
+      height: 58px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 50%;
+      background: var(--green);
+      color: #061b0d;
+      text-decoration: none;
+      font-size: 28px;
+      box-shadow: 0 8px 30px rgba(0, 0, 0, 0.45);
+      z-index: 100;
+      transition: 0.25s ease;
+    }
+
+    .floating-whatsapp:hover {
+      transform: scale(1.1);
+    }
+
+    /* =========================
+       TABLET
+    ========================= */
+
+    @media (max-width: 850px) {
+
+      .site-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+    }
+
+    /* =========================
+       MOBILE
+    ========================= */
+
+    @media (max-width: 600px) {
+
+      .container {
+        width: min(100% - 20px, 1120px);
+      }
+
+      header {
+        padding: 16px 0;
+      }
+
+      .logo {
+        font-size: 20px;
+      }
+
+      .nav-button {
+        padding: 9px 13px;
+        font-size: 13px;
+      }
+
+      .hero {
+        padding: 55px 0 35px;
+      }
+
+      .hero h1 {
+        letter-spacing: -2px;
+      }
+
+      .hero h1 span {
+        letter-spacing: 3px;
+      }
+
+      .offers {
+        grid-template-columns: 1fr;
+      }
+
+      .offer {
+        padding: 23px;
+      }
+
+      .site-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .info-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .sites,
+      .info-card {
+        padding: 20px;
+      }
+
+      .contact {
+        padding: 30px 15px;
+      }
+
+      .floating-whatsapp {
+        right: 15px;
+        bottom: 15px;
+        width: 55px;
+        height: 55px;
+      }
+
+    }
+
+    @media (max-width: 380px) {
+
+      .site-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .hero-actions {
+        flex-direction: column;
+      }
+
+      .btn {
+        width: 100%;
+      }
+
+      .whatsapp-number {
+        width: 100%;
+        font-size: 19px;
+      }
+
+    }
+
+  </style>
 </head>
 
 <body>
 
-<main class="poster">
+<header>
+  <div class="container nav">
 
-  <div class="welcome">WELCOME TO</div>
-
-  <div class="brand">
-    REDDY
-    <span class="anna">ANNA</span>
-  </div>
-
-  <div class="since">
-    <span>SINCE 2010</span>
-  </div>
-
-  <section class="offers">
-    <div class="offer">
-      <div class="percent">10%</div>
-      <div class="bonus">BONUS</div>
-      <div class="sub">ON NEW ID</div>
+    <div class="logo">
+      FAIR<span>PLAY</span>
     </div>
 
-    <div class="offer">
-      <div class="percent">4%</div>
-      <div class="bonus">ON EVERY</div>
-      <div class="sub">REFILL</div>
+    <a
+      class="nav-button"
+      href="https://wa.me/12367718781"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      🟢 WhatsApp
+    </a>
+
+  </div>
+</header>
+
+
+<main>
+
+  <!-- HERO -->
+
+  <section class="hero">
+    <div class="container">
+
+      <div class="eyebrow">
+        24x7 CUSTOMER SUPPORT
+      </div>
+
+      <h1>
+        REDDY
+        <span>ANNA</span>
+      </h1>
+
+      <p>
+        Welcome to FairPlay Info. Get website information
+        and contact our support team directly through WhatsApp.
+      </p>
+
+      <div class="hero-actions">
+
+        <a
+          class="btn btn-primary"
+          href="https://wa.me/12367718781"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          💬 Contact on WhatsApp
+        </a>
+
+        <a
+          class="btn btn-secondary"
+          href="#sites"
+        >
+          View Available Sites
+        </a>
+
+      </div>
+
     </div>
   </section>
 
-  <section class="sites">
-    <div class="sites-title">AVAILABLE SITES</div>
 
-    <div class="site-list">
-      <div class="site">Diamond Exchange</div>
-      <div class="site">Sky Exchange</div>
-      <div class="site">Lesar247</div>
-      <div class="site">World777</div>
-      <div class="site">Reddy444</div>
+  <!-- OFFERS -->
+
+  <section class="container">
+
+    <div class="section-title">
+      <h2>Available Offers</h2>
+      <p>Check the latest information and availability.</p>
     </div>
+
+    <div class="offers">
+
+      <article class="offer">
+        <div class="offer-number">10%</div>
+        <div class="offer-title">New ID Bonus</div>
+        <div class="offer-text">
+          Information regarding new account offers.
+        </div>
+      </article>
+
+      <article class="offer">
+        <div class="offer-number">4%</div>
+        <div class="offer-title">Refill Offer</div>
+        <div class="offer-text">
+          Information regarding available refill offers.
+        </div>
+      </article>
+
+    </div>
+
   </section>
 
-  <div class="message">
-    If you want, you can tell us your favorite sites,<br>
-    <strong>we have all sites available.</strong>
-  </div>
 
-  <div class="withdrawal">
-    <strong>FASTEST WITHDRAWAL</strong><br>
-    Under 15 min in your bank account
-  </div>
+  <!-- SITES -->
 
-  <div class="contact">
-    <div class="wa-label">🟢 WhatsApp for new ID</div>
+  <section class="container" id="sites">
 
-    <div class="phone">
+    <div class="sites">
+
+      <div class="section-title">
+        <h2>Available Sites</h2>
+        <p>Contact support if you need assistance.</p>
+      </div>
+
+      <div class="site-grid">
+
+        <div class="site">Diamond Exchange</div>
+        <div class="site">Sky Exchange</div>
+        <div class="site">Lesar247</div>
+        <div class="site">World777</div>
+        <div class="site">Reddy444</div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- INFORMATION -->
+
+  <section class="container">
+
+    <div class="info-grid">
+
+      <article class="info-card">
+        <div class="info-icon">⚡</div>
+        <h3>Quick Support</h3>
+        <p>
+          Contact our support team directly through WhatsApp
+          for assistance.
+        </p>
+      </article>
+
+      <article class="info-card">
+        <div class="info-icon">🕐</div>
+        <h3>24x7 Service</h3>
+        <p>
+          Support is available around the clock for general
+          website assistance.
+        </p>
+      </article>
+
+    </div>
+
+  </section>
+
+
+  <!-- CONTACT -->
+
+  <section class="container">
+
+    <div class="contact">
+
+      <h2>Need Assistance?</h2>
+
+      <p>
+        Contact us directly on WhatsApp
+      </p>
+
       <a
+        class="whatsapp-number"
         href="https://wa.me/12367718781"
         target="_blank"
         rel="noopener noreferrer"
         aria-label="Contact us on WhatsApp at +1 236 771-8781"
       >
-        +1 236 771-8781
+        🟢 +1 236 771-8781
       </a>
-    </div>
-  </div>
 
-  <div class="footer">
-    🙏 ENJOY 24x7 SERVICES 🙏
-  </div>
+    </div>
+
+  </section>
 
 </main>
+
+
+<footer>
+  <div class="container">
+    © 2026 FairPlay Info. All rights reserved.
+  </div>
+</footer>
+
+
+<!-- Floating WhatsApp button -->
+
+<a
+  class="floating-whatsapp"
+  href="https://wa.me/12367718781"
+  target="_blank"
+  rel="noopener noreferrer"
+  aria-label="Chat with us on WhatsApp"
+>
+  💬
+</a>
 
 </body>
 </html>
