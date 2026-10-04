@@ -1,12 +1,31 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
+
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Reddy Anna - 24x7 Services</title>
+
+<title>Reddy Anna | FairPlay Info</title>
+
+<meta name="description" content="FairPlay Info - Visit our website for information and 24x7 customer support. Contact us through WhatsApp for assistance.">
+
+<meta name="robots" content="index, follow">
+
+<link rel="canonical" href="https://fairplayinfo.com/">
+
+<!-- Open Graph / Social Sharing -->
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://fairplayinfo.com/">
+<meta property="og:title" content="Reddy Anna | FairPlay Info">
+<meta property="og:description" content="Visit FairPlay Info for website information and customer support.">
+<meta property="og:site_name" content="FairPlay Info">
+
+<!-- Mobile Browser -->
+<meta name="theme-color" content="#080808">
+
 <style>
   *{box-sizing:border-box;margin:0;padding:0}
+
   body{
     min-height:100vh;
     background:#080808;
@@ -16,6 +35,7 @@
     justify-content:center;
     padding:18px;
   }
+
   .poster{
     width:min(100%,900px);
     background:
@@ -27,6 +47,7 @@
     overflow:hidden;
     padding:28px 28px 22px;
   }
+
   .welcome{
     text-align:center;
     color:#ffe45b;
@@ -35,6 +56,7 @@
     letter-spacing:2px;
     text-shadow:0 0 14px rgba(255,214,45,.4);
   }
+
   .brand{
     text-align:center;
     color:#ffd21c;
@@ -45,6 +67,7 @@
     text-shadow:2px 3px 0 #8f6500,0 0 18px rgba(255,202,0,.35);
     position:relative;
   }
+
   .anna{
     position:absolute;
     left:50%;
@@ -56,6 +79,7 @@
     letter-spacing:1px;
     padding:6px 18px;
   }
+
   .since{
     display:flex;
     align-items:center;
@@ -66,8 +90,20 @@
     letter-spacing:4px;
     margin:18px 0 25px;
   }
-  .since:before,.since:after{content:"";height:3px;flex:1;background:#d9aa13}
-  .offers{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+
+  .since:before,.since:after{
+    content:"";
+    height:3px;
+    flex:1;
+    background:#d9aa13
+  }
+
+  .offers{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:18px
+  }
+
   .offer{
     background:linear-gradient(135deg,#ffd51e,#c58b00);
     color:#050505;
@@ -77,9 +113,24 @@
     text-align:center;
     box-shadow:0 0 18px rgba(255,200,0,.22);
   }
-  .percent{font-size:clamp(58px,10vw,100px);font-weight:1000;line-height:.9}
-  .bonus{font-size:clamp(24px,4vw,42px);font-weight:1000}
-  .sub{font-size:clamp(18px,3vw,30px);font-weight:900;margin-top:7px}
+
+  .percent{
+    font-size:clamp(58px,10vw,100px);
+    font-weight:1000;
+    line-height:.9
+  }
+
+  .bonus{
+    font-size:clamp(24px,4vw,42px);
+    font-weight:1000
+  }
+
+  .sub{
+    font-size:clamp(18px,3vw,30px);
+    font-weight:900;
+    margin-top:7px
+  }
+
   .sites{
     margin-top:20px;
     border:2px solid #e0b500;
@@ -88,10 +139,21 @@
     background:#0b0b0b;
     text-align:center;
   }
-  .sites-title{color:#ffe044;font-size:clamp(20px,3vw,30px);font-weight:900;margin-bottom:15px}
-  .site-list{
-    display:flex;flex-wrap:wrap;gap:10px;justify-content:center
+
+  .sites-title{
+    color:#ffe044;
+    font-size:clamp(20px,3vw,30px);
+    font-weight:900;
+    margin-bottom:15px
   }
+
+  .site-list{
+    display:flex;
+    flex-wrap:wrap;
+    gap:10px;
+    justify-content:center
+  }
+
   .site{
     padding:10px 16px;
     border:1px solid #d9aa13;
@@ -101,6 +163,7 @@
     font-weight:800;
     font-size:clamp(14px,2vw,19px)
   }
+
   .message,.withdrawal{
     margin-top:16px;
     border-radius:15px;
@@ -112,10 +175,15 @@
     line-height:1.35;
     font-weight:700;
   }
-  .message strong,.withdrawal strong{color:#ffe044}
+
+  .message strong,.withdrawal strong{
+    color:#ffe044
+  }
+
   .withdrawal{
     font-size:clamp(20px,3.5vw,34px);
   }
+
   .contact{
     margin-top:18px;
     border-radius:16px;
@@ -124,8 +192,29 @@
     padding:18px;
     text-align:center;
   }
-  .wa-label{font-size:clamp(20px,3vw,30px);font-weight:900}
-  .phone{font-size:clamp(28px,5vw,52px);font-weight:1000;letter-spacing:1px;margin-top:4px}
+
+  .wa-label{
+    font-size:clamp(20px,3vw,30px);
+    font-weight:900
+  }
+
+  .phone{
+    font-size:clamp(28px,5vw,52px);
+    font-weight:1000;
+    letter-spacing:1px;
+    margin-top:4px;
+  }
+
+  /* Clickable WhatsApp number */
+  .phone a{
+    color:inherit;
+    text-decoration:none;
+  }
+
+  .phone a:hover{
+    text-decoration:underline;
+  }
+
   .footer{
     text-align:center;
     color:#ffe044;
@@ -134,6 +223,7 @@
     font-size:clamp(16px,2.5vw,24px);
     letter-spacing:2px;
   }
+
   @media(max-width:650px){
     .poster{padding:20px 14px 18px}
     .offers{gap:10px}
@@ -143,55 +233,78 @@
   }
 </style>
 </head>
+
 <body>
-  <main class="poster">
-    <div class="welcome">WELCOME TO</div>
-    <div class="brand">REDDY<span class="anna">ANNA</span></div>
 
-    <div class="since">
-      <span>SINCE 2010</span>
+<main class="poster">
+
+  <div class="welcome">WELCOME TO</div>
+
+  <div class="brand">
+    REDDY
+    <span class="anna">ANNA</span>
+  </div>
+
+  <div class="since">
+    <span>SINCE 2010</span>
+  </div>
+
+  <section class="offers">
+    <div class="offer">
+      <div class="percent">10%</div>
+      <div class="bonus">BONUS</div>
+      <div class="sub">ON NEW ID</div>
     </div>
 
-    <section class="offers">
-      <div class="offer">
-        <div class="percent">10%</div>
-        <div class="bonus">BONUS</div>
-        <div class="sub">ON NEW ID</div>
-      </div>
-      <div class="offer">
-        <div class="percent">4%</div>
-        <div class="bonus">ON EVERY</div>
-        <div class="sub">REFILL</div>
-      </div>
-    </section>
-
-    <section class="sites">
-      <div class="sites-title">AVAILABLE SITES</div>
-      <div class="site-list">
-        <div class="site">Diamond Exchange</div>
-        <div class="site">Sky Exchange</div>
-        <div class="site">Lesar247</div>
-        <div class="site">World777</div>
-        <div class="site">Reddy444</div>
-      </div>
-    </section>
-
-    <div class="message">
-      If you want, you can tell us your favorite sites,<br>
-      <strong>we have all sites available.</strong>
+    <div class="offer">
+      <div class="percent">4%</div>
+      <div class="bonus">ON EVERY</div>
+      <div class="sub">REFILL</div>
     </div>
+  </section>
 
-    <div class="withdrawal">
-      <strong>FASTEST WITHDRAWAL</strong><br>
-      Under 15 min in your bank account
+  <section class="sites">
+    <div class="sites-title">AVAILABLE SITES</div>
+
+    <div class="site-list">
+      <div class="site">Diamond Exchange</div>
+      <div class="site">Sky Exchange</div>
+      <div class="site">Lesar247</div>
+      <div class="site">World777</div>
+      <div class="site">Reddy444</div>
     </div>
+  </section>
 
-    <div class="contact">
-      <div class="wa-label">🟢 WhatsApp for new ID</div>
-      <div class="phone">+1 236 771-8781</div>
+  <div class="message">
+    If you want, you can tell us your favorite sites,<br>
+    <strong>we have all sites available.</strong>
+  </div>
+
+  <div class="withdrawal">
+    <strong>FASTEST WITHDRAWAL</strong><br>
+    Under 15 min in your bank account
+  </div>
+
+  <div class="contact">
+    <div class="wa-label">🟢 WhatsApp for new ID</div>
+
+    <div class="phone">
+      <a
+        href="https://wa.me/12367718781"
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label="Contact us on WhatsApp at +1 236 771-8781"
+      >
+        +1 236 771-8781
+      </a>
     </div>
+  </div>
 
-    <div class="footer">🙏 ENJOY 24x7 SERVICES 🙏</div>
-  </main>
+  <div class="footer">
+    🙏 ENJOY 24x7 SERVICES 🙏
+  </div>
+
+</main>
+
 </body>
 </html>
